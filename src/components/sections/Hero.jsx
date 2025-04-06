@@ -7,24 +7,15 @@ import { RoughNotation } from "react-rough-notation";
 const Hero = () => {
   return (
     <>
-      <div className="absolute inset-0 flex md:mt-52 mt-28 mx-4 md:mx-8 lg:mx-0 text-muted-foreground ">
+      <div className="absolute inset-0 flex md:mt-52 mt-28 px-2 sm:px-0 mx-4 md:mx-8 lg:mx-0 text-muted-foreground ">
         <div className="relative z-40 mx-auto  max-w-[52rem] ">
           <div className="flex flex-col justify-between space-y-10  md:flex-row md:space-x-10 md:space-y-0">
             <div>
-              <h1 className="max-w-3xl text-2xl font-bold dark:text-zinc-50 md:text-5xl md:leading-tight ">
-                Hey! I'm{" "}
-                <RoughNotation
-                  type="highlight"
-                  show
-                  color="#f59e0b"
-                  animationDelay={1000}
-                >
-                  Aryan Inguz
-                </RoughNotation>{" "}
+            <h1 className="max-w-3xl text-2xl font-bold dark:text-zinc-50 md:text-5xl md:leading-tight ">
+                Hey! I'm Ayush Pratap Singh
               </h1>
               <p className="mt-8 max-w-2xl text-sm tracking-wide text-muted-foreground md:text-base md:leading-loose">
-                I love programming my ideas into reality, with code. I'm a web + mobile app developer
-                with a keen intrest in Cyber Security and Cloud as well, Nice to meet you!
+                I am a third-year B.Tech Computer Science student with a strong passion for backend and full-stack web development. I enjoy building scalable, efficient systems and diving deep into understanding how things work at a low level. With a solid foundation in programming languages like Java,  C++, JavaScript, and TypeScript, I have honed my skills in frameworks such as React.js, Node.js, Express.js, and Next.js.
               </p>
             </div>
             <div className="order-first md:order-last">
@@ -46,7 +37,7 @@ const Hero = () => {
                     <svg
                       stroke="currentColor"
                       fill="currentColor"
-                      stroke-width="0"
+                      strokeWidth="0"
                       viewBox="0 0 1024 1024"
                       className="hover:text-primary h-5 w-5 transition duration-150"
                       height="1em"
@@ -66,7 +57,7 @@ const Hero = () => {
                     <svg
                       stroke="currentColor"
                       fill="currentColor"
-                      stroke-width="0"
+                      strokeWidth="0"
                       viewBox="0 0 1024 1024"
                       className="hover:text-primary h-5 w-5 transition duration-150"
                       height="1em"
@@ -86,7 +77,7 @@ const Hero = () => {
                     <svg
                       stroke="currentColor"
                       fill="currentColor"
-                      stroke-width="0"
+                      strokeWidth="0"
                       viewBox="0 0 1024 1024"
                       className="hover:text-primary h-5 w-5 transition duration-150"
                       height="1em"
@@ -101,20 +92,16 @@ const Hero = () => {
             </div>
           </div>
           <p className="mt-8 text-sm tracking-wide  md:text-base md:leading-loose">
-            I'm a full-stack developer, freelancer and an indie hacker
-            specializing in TypeScript, React.js, and Next.js. With a proven
-            track record of delivering 30+ large-scale freelancing projects—many
-            of which have evolved into startups—I’ve also provided over 200
-            hours of dedicated client support. I’m passionate about system
-            design and cybersecurity, spending my free time playing CTF games
-            and uncovering vulnerabilities in applications.
+            This portfolio is a reflection of my technical growth and the projects I have passionately worked on. Feel free to explore and learn more about my work!
             <RoughNotation type="box" show color="cyan">
               {" "}
               <span className="text-blue-600">
-              <Link href="mailto:aryaninguz369@gmail.com" target="_blank">
-                connect    me 
-              </Link> </span>
-            </RoughNotation> if you want to bring your MVP idea to life.{" "}
+                <Link href="mailto:ayushtomar8624@gmail.com" target="_blank">
+                  contact me
+                </Link>{" "}
+              </span>
+            </RoughNotation>{" "}
+            if you want to bring your MVP idea to life.{" "}
             <Link href="/about">
               <span className="text-blue-600">Read more</span>
             </Link>
