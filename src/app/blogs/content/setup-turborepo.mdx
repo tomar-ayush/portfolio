@@ -1,0 +1,185 @@
+---
+title: "Setting Up shadcn/ui and Tailwind CSS in a Turborepo"
+publishedAt: "2025-01-20"
+summary: "Guide to integrating shadcn/ui and Tailwind CSS in a Turborepo for scalable design systems."
+readTime: "6 mins"
+featured: true
+icon: "/images/profile.jpg"
+---
+
+## Introduction
+
+Combine Turborepo, **shadcn/ui**, and **Tailwind CSS** to build a modular and scalable design system. Here's how to set it up.
+
+---
+
+## Prerequisites
+
+Ensure you have:
+- **Node.js** (v18+)
+- **pnpm**
+- Basic monorepo knowledge
+
+---
+
+## Step 1: Turborepo Setup
+
+Initialize Turborepo:
+
+```bash
+npx create-turbo@latest my-turborepo
+cd my-turborepo
+```
+Choose **pnpm** as the package manager.
+
+### Structure:
+
+```
+my-turborepo/
+├── apps/
+│   ├── web/
+│   └── admin/
+├── packages/
+│   ├── ui/
+│   ├── config/
+├── turbo.json
+└── package.json
+```
+
+---
+
+## Step 2: Add Tailwind CSS
+
+### In `config` Package:
+
+```bash
+pnpm create config
+cd packages/config
+pnpm add tailwindcss postcss autoprefixer
+npx tailwindcss init
+```
+
+Update `tailwind.config.js`:
+
+```js
+module.exports = {
+  content: [
+    "../../apps/*/src/**/*.{js,ts,jsx,tsx}",
+    "../../packages/ui/src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: { extend: {} },
+  plugins: [],
+};
+```
+
+---
+
+## Step 3: Install shadcn/ui
+
+### In `ui` Package:
+
+```bash
+pnpm create ui
+cd packages/ui
+pnpm add class-variance-authority clsx tailwind-variants
+npx shadcn add button input card
+```
+
+---
+
+## Step 4: Tailwind in shadcn/ui
+
+Add `postcss.config.js`:
+
+```js
+module.exports = { plugins: { tailwindcss: {}, autoprefixer: {} } };
+```
+
+Create `src/styles/tailwind.css`:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Extend `tailwind.config.js`:
+
+```js
+const sharedConfig = require("@my-turborepo/config/tailwind.config");
+module.exports = {
+  ...sharedConfig,
+  theme: {
+    ...sharedConfig.theme,
+    extend: { colors: { primary: "#4F46E5" } },
+  },
+};
+```
+
+---
+
+## Step 5: Tailwind in Apps
+
+### Install in `web`:
+
+```bash
+cd apps/web
+pnpm add tailwindcss postcss autoprefixer
+npx tailwindcss init
+```
+
+Use shared config:
+
+```js
+const sharedConfig = require("@my-turborepo/config/tailwind.config");
+module.exports = { ...sharedConfig };
+```
+
+Add global CSS:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Import in `pages/_app.tsx`:
+
+```tsx
+import "../styles/globals.css";
+```
+
+---
+
+## Step 6: Share Components
+
+Add `ui` as a dependency:
+
+```bash
+cd apps/web
+pnpm add @my-turborepo/ui
+```
+
+Use components:
+
+```tsx
+import { Button } from "@my-turborepo/ui";
+
+export default function Home() {
+  return <Button variant="primary">Click Me</Button>;
+}
+```
+
+---
+
+## Step 7: Run Development Server
+
+```bash
+pnpm turbo run dev --parallel
+```
+
+---
+
+## Conclusion
+
+You’ve set up Turborepo with shadcn/ui and Tailwind CSS for scalable, reusable design components. Share this guide and happy coding! 🚀
