@@ -66,26 +66,26 @@ and tracks LinkedIn referral connections.`,
     video: "",
   },
   {
-    title: "Infinty - Sales and Marketing Automation",
-    href: "https://infinity-saas.vercel.app/",
-    dates: "2023",
+    title: "Outreach - Sales and Marketing Automation",
+    href: "https://outreach-saas.vercel.app/",
+    dates: "2024",
     active: false,
     description:
-      "Infinity is a platform built using Next.js, Node.js, and Express.js that acts like a cofounder by sending custom personalized emails to potential clients of a business. The project is designed to automate and enhance client outreach by tailoring email content based on business needs, ensuring better engagement and conversion rates",
+      "Outreach is a platform built using Next.js, Node.js, and Express.js that acts like a cofounder by sending custom personalized emails to potential clients of a business. The project is designed to automate and enhance client outreach by tailoring email content based on business needs, ensuring better engagement and conversion rates",
     technologies: ["Typescript", "HTML", "TailwindCSS", "NextJS"],
     links: [
       {
         type: "Website",
-        href: "https://infinity-saas.vercel.app/",
+        href: "https://outreach-saas.vercel.app/",
         icon: <Icons.globe className="h-3 w-3" />,
       },
       {
         type: "Source",
-        href: "https://github.com/tomar-ayush/newinfinity",
+        href: "https://github.com/tomar-ayush/outReach",
         icon: <Icons.github className="h-3 w-3" />,
       },
     ],
-    image: "/projects/infinity.png",
+    image: "/projects/outreach.png",
     video: "",
   },
 ];
