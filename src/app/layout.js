@@ -4,6 +4,7 @@ import Providers from "./providers";
 import RollingIcons from "@/components/ui/RollingIcons";
 import AnimateEnter from "@/components/ui/AnimateEnter";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: { default: "Ayush" },
@@ -91,6 +92,7 @@ export default function RootLayout({ children }) {
             </>
           </AnimateEnter>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );

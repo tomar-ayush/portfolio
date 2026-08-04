@@ -7,7 +7,7 @@ export const WORK = [
       dates: "Oct 2025 - present",
       location: "Bengaluru, India",
       description: "Earning my paycheck",
-      image: "/images/professional/morgan-stanley-64px.jpg",
+      image: "/images/professional/morganstanley.jpg",
       mlh: "#",
       links: [
         {
