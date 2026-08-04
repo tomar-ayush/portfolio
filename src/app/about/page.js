@@ -124,7 +124,7 @@ export default function About() {
           ))}
         </div>
       </section>
-      {/*
+      
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -152,7 +152,7 @@ export default function About() {
           </BlurFade>
         </div>
       </section>
-          */}
+         
       <section id="connect">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">Hook with me</h2>
