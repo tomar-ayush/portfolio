@@ -53,10 +53,10 @@ export const PROJECTS = [
       href: "https://applyai-agent.vercel.app/",                                                                     
       dates: "25 July 2026 - 1 August 2026",                                                                         
       active: true,                                                                                                  
-      description:                                                                                                   
-        ```An end-to-end AI platform that parses job descriptions, performs parallel LLM resume optimization in LaTeX  
+      description:
+        `An end-to-end AI platform that parses job descriptions, performs parallel LLM resume optimization in LaTeX  
   with metric pinning, manages Cloudflare R2 storage, automates Workday job submissions via Playwright worker nodes, 
-  and tracks LinkedIn referral connections.```,                                                                        
+  and tracks LinkedIn referral connections.`,                                                                        
       technologies: [                                                                                                
         "Python",                                                                                                    
         "FastAPI",                                                                                                   
