@@ -62,7 +62,7 @@ export default function About() {
           </Markdown>
         </BlurFade>
       </section>
-      {/*
+{/*       
       <section id="career">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">Career</h2>
@@ -74,57 +74,7 @@ export default function About() {
         </BlurFade>
       </section>
       */}
-      <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
-          </BlurFade>
-          <div className="flex flex-col gap-3">
-            {SKILLS.map((skillCategory, id) => (
-              <BlurFade
-                key={skillCategory.category}
-                delay={BLUR_FADE_DELAY * 10 + id * 0.05}
-              >
-                <p key={skillCategory.category} className="text-sm mb-1">
-                  {skillCategory.category}
-                </p>
-                <div className="flex flex-wrap gap-1">
-                  {skillCategory.technologies.map((tech, techId) => (
-                    <Badge key={`${skillCategory.category}-${tech}`}>
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section id="education">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 7}>
-            <h2 className="text-xl font-bold">Education</h2>
-          </BlurFade>
-          {DATA.education.map((education, id) => (
-            <BlurFade
-              key={education.school}
-              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
-            >
-              <ResumeCard
-                key={education.school}
-                href={education.href}
-                logoUrl={education.logoUrl}
-                altText={education.school}
-                title={education.school}
-                location={education.location}
-                subtitle={education.degree}
-                period={`${education.start} - ${education.end}`}
-              />
-            </BlurFade>
-          ))}
-        </div>
-      </section>
-      
+
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -152,6 +102,60 @@ export default function About() {
           </BlurFade>
         </div>
       </section>
+
+      <section id="skills">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <h2 className="text-xl font-bold">Skills</h2>
+          </BlurFade>
+          <div className="flex flex-col gap-3">
+            {SKILLS.map((skillCategory, id) => (
+              <BlurFade
+                key={skillCategory.category}
+                delay={BLUR_FADE_DELAY * 10 + id * 0.05}
+              >
+                <p key={skillCategory.category} className="text-sm mb-1">
+                  {skillCategory.category}
+                </p>
+                <div className="flex flex-wrap gap-1">
+                  {skillCategory.technologies.map((tech, techId) => (
+                    <Badge key={`${skillCategory.category}-${tech}`}>
+                      {tech}
+                    </Badge>
+                  ))}
+                </div>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
+    
+
+      <section id="education">
+        <div className="flex min-h-0 flex-col gap-y-3">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <h2 className="text-xl font-bold">Education</h2>
+          </BlurFade>
+          {DATA.education.map((education, id) => (
+            <BlurFade
+              key={education.school}
+              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
+            >
+              <ResumeCard
+                key={education.school}
+                href={education.href}
+                logoUrl={education.logoUrl}
+                altText={education.school}
+                title={education.school}
+                location={education.location}
+                subtitle={education.degree}
+                period={`${education.start} - ${education.end}`}
+              />
+            </BlurFade>
+          ))}
+        </div>
+      </section>
+      
          
       <section id="connect">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
