@@ -2,6 +2,46 @@ import { Icons } from "@/components/ui/icons";
 import { ExternalLink, Link, ArchiveIcon } from "lucide-react";
 
 export const PROJECTS = [
+    {                                                                                                                
+      title: "ApplyAI — Autonomous Resume Tailoring & Application Platform",                                         
+      href: "https://applyai-agent.vercel.app/",                                                                     
+      dates: "25 July 2026 - 1 August 2026",                                                                         
+      active: true,                                                                                                  
+      description:
+        `An end-to-end AI platform that parses job descriptions, performs parallel LLM resume optimization in LaTeX  
+  with metric pinning, manages Cloudflare R2 storage, automates Workday job submissions via Playwright worker nodes, 
+  and tracks LinkedIn referral connections.`,                                                                        
+      technologies: [                                                                                                
+        "Python",                                                                                                    
+        "FastAPI",                                                                                                   
+        "React",                                                                                                     
+        "TypeScript",                                                                                                
+        "PostgreSQL",                                                                                                
+        "SQLAlchemy",                                                                                                
+        "Cloudflare R2",                                                                                             
+        "OpenAI / Gemini / Claude",                                                                                  
+        "OpenRouter",                                                                                                
+        "Node.js",                                                                                                   
+        "Playwright",                                                                                                
+        "LaTeX / pdflatex",                                                                                          
+        "Tailwind CSS",                                                                                              
+        "TanStack Query"                                                                                             
+      ],                                                                                                             
+      links: [                                                                                                       
+        {                                                                                                            
+          type: "Website",                                                                                           
+          href: "https://applyai-agent.vercel.app/",                                                                 
+          icon: <Icons.globe className="h-3 w-3" />,                                                                 
+        },                                                                                                           
+        {                                                                                                            
+          type: "Source",                                                                                            
+          href: "https://github.com/tomar-ayush/resume-agents",                                                      
+          icon: <Icons.github className="h-3 w-3" />,                                                                
+        },                                                                                                           
+      ],                                                                                                             
+      image: "/projects/applyai.png",                                                                                
+      video: "",                                                                                                     
+    },
   {
     title: "Infinty - Sales and Marketing Automation",
     href: "https://infinity-saas.vercel.app/",
@@ -48,46 +88,6 @@ export const PROJECTS = [
     image: "/projects/flex-it-out.png",
     video: "",
   },
-  {                                                                                                                
-      title: "ApplyAI — Autonomous Resume Tailoring & Application Platform",                                         
-      href: "https://applyai-agent.vercel.app/",                                                                     
-      dates: "25 July 2026 - 1 August 2026",                                                                         
-      active: true,                                                                                                  
-      description:
-        `An end-to-end AI platform that parses job descriptions, performs parallel LLM resume optimization in LaTeX  
-  with metric pinning, manages Cloudflare R2 storage, automates Workday job submissions via Playwright worker nodes, 
-  and tracks LinkedIn referral connections.`,                                                                        
-      technologies: [                                                                                                
-        "Python",                                                                                                    
-        "FastAPI",                                                                                                   
-        "React",                                                                                                     
-        "TypeScript",                                                                                                
-        "PostgreSQL",                                                                                                
-        "SQLAlchemy",                                                                                                
-        "Cloudflare R2",                                                                                             
-        "OpenAI / Gemini / Claude",                                                                                  
-        "OpenRouter",                                                                                                
-        "Node.js",                                                                                                   
-        "Playwright",                                                                                                
-        "LaTeX / pdflatex",                                                                                          
-        "Tailwind CSS",                                                                                              
-        "TanStack Query"                                                                                             
-      ],                                                                                                             
-      links: [                                                                                                       
-        {                                                                                                            
-          type: "Website",                                                                                           
-          href: "https://applyai-agent.vercel.app/",                                                                 
-          icon: <Icons.globe className="h-3 w-3" />,                                                                 
-        },                                                                                                           
-        {                                                                                                            
-          type: "Source",                                                                                            
-          href: "https://github.com/tomar-ayush/resume-agents",                                                      
-          icon: <Icons.github className="h-3 w-3" />,                                                                
-        },                                                                                                           
-      ],                                                                                                             
-      image: "/projects/applyai.png",                                                                                
-      video: "",                                                                                                     
-    },
 ];
 
 export const FREELANCE_PROJECTS = [
