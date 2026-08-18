@@ -15,8 +15,9 @@
     "personal-site"
   ],
   "scripts": {
+    "postinstall": "bash setup-submodules.sh",
     "dev": "node sync-images.js && next dev ",
-    "build": "node sync-images.js && next build",
+    "build": "bash setup-submodules.sh && node sync-images.js && next build",
     "start": "next start",
     "lint": "next lint"
   },
