@@ -13,9 +13,9 @@ echo "Setting up private git submodules for Vercel build..."
 # Rewrite all github HTTPS URLs to include the token for authentication
 git config --global url."https://${GITHUB_ACCESS_TOKEN}@github.com/".insteadOf "https://github.com/"
 
-# Initialize and clone all submodules
+# Initialize and clone all submodules (--remote fetches latest from the branch, not pinned commit)
 git submodule sync --recursive
-git submodule update --init --recursive
+git submodule update --init --recursive --remote
 
 echo "Submodules cloned successfully."
 echo "Contents of notes/Publish:"
