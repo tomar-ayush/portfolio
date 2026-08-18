@@ -74,4 +74,4 @@ const getMDXData = (dir) => {
 };
 
 export default () =>
-  getMDXData(path.join(process.cwd(), "src", "app", "blogs", "notes", "publish"));
+  getMDXData(path.join(process.cwd(), "src", "app", "blogs", "notes", "Publish"));
