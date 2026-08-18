@@ -1,0 +1,3 @@
+[submodule "src/app/blogs/notes"]
+	path = src/app/blogs/notes
+	url = git@github.com:tomar-ayush/my-notes.git
