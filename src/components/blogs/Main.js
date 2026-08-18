@@ -21,17 +21,15 @@ export default () => {
               new Date(a.metadata.publishedAt).getTime()
           )
           .map((post) => (
-            <Link key={post.slug} href={`/blogs/${post.slug}`}>
               <BlogCard
+                key={post.slug}
                 href={`/blogs/${post.slug}`}
                 title={post.metadata.title}
                 description={post.metadata.summary}
                 publishedAt={post.metadata.publishedAt}
                 iconUrl={post.metadata.image}
                 readTime={post.metadata.readTime}
-                key={post.slug}
               />
-            </Link>
           ))}
       </main>
     </section>

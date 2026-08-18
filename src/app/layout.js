@@ -74,7 +74,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
 
         <script defer src="https://cloud.umami.is/script.js" data-website-id="928d7257-0d8c-4850-8b7a-c19a84966efe"></script>
